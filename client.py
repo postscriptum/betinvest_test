@@ -30,8 +30,7 @@ async def main():
             for section in results['sections']:
                 section_name = section['name']
                 redis_sections.delete(section_name)
-                for event_id in section['events']:
-                    redis_sections.rpush(section_name, event_id)
+                redis_sections.rpush(section_name, *section['events'])
 
 
 if __name__ == '__main__':

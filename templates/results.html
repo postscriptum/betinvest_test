@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Results</title>
+        <style>
+            .section {
+                background-color: #87cefa;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            {% for section in results %}
+                <tr class="section"><td colspan="5">{{ section.name }}</td></tr>
+                {% for event in section.events %}
+                <tr>
+                    <td>{{ event.name }}</td>
+                    <td>{{ event.score }}</td>
+                    <td>{{ event.start_time }}</td>
+                    <td>{{ event.status }}</td>
+                    <td>{{ event.comment }}</td>
+                </tr>
+                {% endfor %}
+            {% endfor %}
+        </table>
+    </body>
+</html>
