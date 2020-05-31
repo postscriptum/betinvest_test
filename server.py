@@ -1,3 +1,8 @@
+"""
+server.py module displays the results as table.
+http://127.0.0.1:8080/ - returns all results
+http://127.0.0.1:8080/{begin_string} - returns results with names begining with specified string
+"""
 from aiohttp import web
 import aiohttp_jinja2
 import jinja2

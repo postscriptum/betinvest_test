@@ -1,3 +1,7 @@
+"""
+client.py module scrapes sport results from the site https://www.fonbet.ru/results/
+The results are stored in Redis.
+"""
 import asyncio
 import aiohttp
 import datetime
